@@ -96,7 +96,7 @@ internal class FilesOrchestrator {
                     return lastFile
                 }
             } catch {
-                developerLogger?.error("🔥 Failed to read previously used writable file: \(error)")
+                developerLogger?.error(" Failed to read previously used writable file: \(error)")
             }
         }
 
@@ -124,7 +124,7 @@ internal class FilesOrchestrator {
 
             return fileIsOldEnough ? oldestFile : nil
         } catch {
-            developerLogger?.error("🔥 Failed to obtain readable file: \(error)")
+            developerLogger?.error(" Failed to obtain readable file: \(error)")
             return nil
         }
     }
@@ -133,7 +133,7 @@ internal class FilesOrchestrator {
         do {
             try readableFile.delete()
         } catch {
-            developerLogger?.error("🔥 Failed to delete file: \(error)")
+            developerLogger?.error(" Failed to delete file: \(error)")
         }
     }
 

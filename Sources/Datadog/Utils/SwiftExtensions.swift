@@ -26,8 +26,8 @@ extension Date {
             let miliseconds = self.timeIntervalSince1970 * 1_000
             return try UInt64(withReportingOverflow: miliseconds)
         } catch {
-            userLogger.error("🔥 Failed to convert timestamp: \(error)")
-            developerLogger?.error("🔥 Failed to convert timestamp: \(error)")
+            userLogger.error(" Failed to convert timestamp: \(error)")
+            developerLogger?.error(" Failed to convert timestamp: \(error)")
             return UInt64.max
         }
     }
