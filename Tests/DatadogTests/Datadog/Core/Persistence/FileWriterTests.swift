@@ -147,7 +147,7 @@ class FileWriterTests: XCTestCase {
         wait(for: [expectation2], timeout: 1)
         XCTAssertEqual(try temporaryDirectory.files()[0].read(), #"{"key1":"value1"}"#.utf8Data) // same content as before
         XCTAssertEqual(output.recordedLog?.level, .error)
-        XCTAssertEqual(output.recordedLog?.message, " Failed to write log: data exceeds the maximum size of 17 bytes.")
+        XCTAssertEqual(output.recordedLog?.message, "🔥 Failed to write log: data exceeds the maximum size of 17 bytes.")
     }
 
     func testGivenErrorVerbosity_whenDataCannotBeEncoded_itPrintsError() throws {
@@ -169,7 +169,7 @@ class FileWriterTests: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
 
         XCTAssertEqual(output.recordedLog?.level, .error)
-        XCTAssertEqual(output.recordedLog?.message, " Failed to write log: failed to encode `FailingEncodable`.")
+        XCTAssertEqual(output.recordedLog?.message, "🔥 Failed to write log: failed to encode `FailingEncodable`.")
     }
 
     func testGivenErrorVerbosity_whenIOExceptionIsThrown_itPrintsError() throws {
@@ -194,7 +194,7 @@ class FileWriterTests: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
 
         XCTAssertEqual(output.recordedLog?.level, .error)
-        XCTAssertEqual(output.recordedLog?.message, " Failed to write log: I/O exception")
+        XCTAssertEqual(output.recordedLog?.message, "🔥 Failed to write log: I/O exception")
     }
 
     private func waitForWritesCompletion(on queue: DispatchQueue, thenFulfill expectation: XCTestExpectation) {

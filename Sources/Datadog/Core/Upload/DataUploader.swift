@@ -26,8 +26,8 @@ internal class UploadURLProvider {
         urlComponents?.percentEncodedQueryItems = queryItems
 
         guard let url = urlComponents?.url else {
-            userLogger.error(" Failed to create URL from \(urlWithClientToken) with \(queryItems)")
-            developerLogger?.error(" Failed to create URL from \(urlWithClientToken) with \(queryItems)")
+            userLogger.error("🔥 Failed to create URL from \(urlWithClientToken) with \(queryItems)")
+            developerLogger?.error("🔥 Failed to create URL from \(urlWithClientToken) with \(queryItems)")
             return urlWithClientToken
         }
         return url
@@ -64,7 +64,7 @@ internal final class DataUploader {
             case .success(let httpResponse):
                 uploadStatus = DataUploadStatus(from: httpResponse)
             case .failure(let error):
-                developerLogger?.error(" Failed to upload data: \(error)")
+                developerLogger?.error("🔥 Failed to upload data: \(error)")
                 uploadStatus = .networkError
             }
 

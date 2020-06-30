@@ -33,9 +33,9 @@ extension Directory {
         do {
             try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true, attributes: attributes)
             let initialFilesCount = try files().count
-            XCTAssert(initialFilesCount == 0, " `TestsDirectory` is not empty: \(url)", file: file, line: line)
+            XCTAssert(initialFilesCount == 0, "🔥 `TestsDirectory` is not empty: \(url)", file: file, line: line)
         } catch {
-            XCTFail(" Failed to create `TestsDirectory`: \(error)", file: file, line: line)
+            XCTFail("🔥 Failed to create `TestsDirectory`: \(error)", file: file, line: line)
         }
     }
 
@@ -45,7 +45,7 @@ extension Directory {
             do {
                 try FileManager.default.removeItem(at: url)
             } catch {
-                XCTFail(" Failed to delete `TestsDirectory`: \(error)", file: file, line: line)
+                XCTFail("🔥 Failed to delete `TestsDirectory`: \(error)", file: file, line: line)
             }
         }
     }
