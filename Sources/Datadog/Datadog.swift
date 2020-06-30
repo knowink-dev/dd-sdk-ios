@@ -54,7 +54,7 @@ public class Datadog {
         do {
             try initializeOrThrow(appContext: appContext, configuration: configuration)
         } catch {
-            consolePrint("🔥 \(error)")
+            consolePrint(" \(error)")
         }
     }
 

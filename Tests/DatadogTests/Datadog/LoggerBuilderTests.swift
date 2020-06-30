@@ -127,7 +127,7 @@ class LoggerBuilderErrorTests: XCTestCase {
         let logger = Logger.builder.build()
         XCTAssertEqual(
             printFunction.printedMessage,
-            "🔥 Datadog SDK usage error: `Datadog.initialize()` must be called prior to `Logger.builder.build()`."
+            " Datadog SDK usage error: `Datadog.initialize()` must be called prior to `Logger.builder.build()`."
         )
         assertThat(logger: logger, usesOutput: NoOpLogOutput.self)
     }

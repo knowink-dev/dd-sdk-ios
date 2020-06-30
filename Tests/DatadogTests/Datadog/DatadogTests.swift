@@ -84,7 +84,7 @@ class DatadogTests: XCTestCase {
 
         XCTAssertEqual(
             printFunction.printedMessage,
-            "🔥 Datadog SDK usage error: `clientToken` cannot be empty."
+            " Datadog SDK usage error: `clientToken` cannot be empty."
         )
         XCTAssertNil(Datadog.instance)
     }
@@ -95,7 +95,7 @@ class DatadogTests: XCTestCase {
 
         XCTAssertEqual(
             printFunction.printedMessage,
-            "🔥 Datadog SDK usage error: SDK is already initialized."
+            " Datadog SDK usage error: SDK is already initialized."
         )
 
         try Datadog.deinitializeOrThrow()

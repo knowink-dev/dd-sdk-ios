@@ -48,8 +48,8 @@ internal final class FileWriter {
                 }
             }
         } catch {
-            userLogger.error("🔥 Failed to write log: \(error)")
-            developerLogger?.error("🔥 Failed to write file: \(error)")
+            userLogger.error(" Failed to write log: \(error)")
+            developerLogger?.error(" Failed to write file: \(error)")
         }
     }
 }
